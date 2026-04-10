@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Dog Explorer | Asynchronous JavaScript App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <div class="app-header">
+        <h1>🐕 Dog Explorer</h1>
+        <p>Discover breeds, facts, groups — all from the Dog API</p>
+    </div>
+
+    <div class="action-bar">
+        <button id="loadBreedsBtn">📋 Load All Breeds</button>
+        <button id="getFactBtn">✨ Get Random Dog Fact</button>
+        <button id="loadGroupsBtn">🐾 Load Dog Groups</button>
+    </div>
+
+    <!-- Status message area for loading & errors -->
+    <div id="globalStatus" class="status-message">✨ Ready! Click buttons to explore.</div>
+
+    <div class="dashboard">
+        <!-- Breeds section -->
+        <div class="card">
+            <div class="card-header">
+                <h2>🐶 Dog Breeds</h2>
+                <small>Click on any breed to see detailed info</small>
+            </div>
+            <div class="card-content" id="breedsContainer">
+                <p style="color:#b48c5c;">No breeds loaded yet. Press "Load All Breeds".</p>
+            </div>
+        </div>
+
+        <!-- Breed Details (single breed) -->
+        <div class="card">
+            <div class="card-header">
+                <h2>🔍 Breed Details</h2>
+                <small>Detailed info after click</small>
+            </div>
+            <div class="card-content" id="breedDetailContainer">
+                <div class="detail-box">✨ Select a breed from the left to see details.</div>
+            </div>
+        </div>
+
+        <!-- Dog Fact section -->
+        <div class="card">
+            <div class="card-header">
+                <h2>📖 Random Dog Fact</h2>
+            </div>
+            <div class="card-content" id="factContainer">
+                <p>Click "Get Random Dog Fact" to see something interesting!</p>
+            </div>
+        </div>
+
+        <!-- Dog Groups section -->
+        <div class="card">
+            <div class="card-header">
+                <h2>🐕‍🦺 Dog Groups</h2>
+                <small>AKC breed groups</small>
+            </div>
+            <div class="card-content" id="groupsContainer">
+                <p>No groups loaded. Press "Load Dog Groups".</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        🐾 Data provided by Dog API (dogapi.dog) | Async JavaScript assignment: fetch, async/await, error handling
+    </footer>
+</div>
+
+<script src="index.js"></script>
+</body>
+</html>
